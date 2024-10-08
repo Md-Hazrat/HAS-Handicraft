@@ -1,10 +1,10 @@
-import { Metadata } from 'next'
-import SignInForm from './form'
+import { Metadata } from "next";
+import { Form } from "react-hook-form";
 
 export const metadata: Metadata = {
-  title: 'Sign in',
-}
+  title: "Sign in",
+};
 
 export default async function Signin() {
-  return <SignInForm />
+  return <Form />;
 }

@@ -1,9 +1,10 @@
-import { Metadata } from 'next'
-import RegisterForm from './form'
+import { Metadata } from "next";
+
+import { Form } from "react-hook-form";
 export const metadata: Metadata = {
-  title: 'Register',
-}
+  title: "Register",
+};
 
 export default async function Register() {
-  return <RegisterForm />
+  return <Form />;
 }

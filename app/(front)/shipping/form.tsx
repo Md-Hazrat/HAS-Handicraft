@@ -34,7 +34,7 @@ const ShippingForm = () => {
 
   const formSubmit: SubmitHandler<ShippingAddress> = async (form) => {
     saveShippingAddrress(form)
-    router.push('/payment')
+    router?.push('/payment')
   }
 
   const FormInput = ({
