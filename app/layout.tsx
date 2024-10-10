@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/header/header";
 import Providers from "@/components/Providers";
 
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",

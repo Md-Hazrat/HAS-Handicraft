@@ -18,7 +18,7 @@ const Form = () => {
 
   const params = useSearchParams();
   const router = useRouter();
-  let callbackUrl = params.get("callbackUrl") || "/";
+  let callbackUrl = params?.get("callbackUrl") || "/";
   const {
     register,
     handleSubmit,
@@ -34,7 +34,7 @@ const Form = () => {
   });
   useEffect(() => {
     if (session && session.user) {
-      router.push(callbackUrl);
+      router?.push(callbackUrl);
     }
   }, [callbackUrl, params, router, session]);
 

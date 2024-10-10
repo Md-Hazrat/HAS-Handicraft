@@ -67,14 +67,14 @@ const Menu = () => {
           <li>
             <Link className="btn btn-ghost rounded-btn" href="/cart">
               Cart
-              {mounted && items.length != 0 && (
+              {mounted && items?.length != 0 && (
                 <div className="badge badge-secondary">
-                  {items.reduce((a, c) => a + c.qty, 0)}{" "}
+                  {items?.reduce((a, c) => a + c?.qty, 0)}{" "}
                 </div>
               )}
             </Link>
           </li>
-          {session && session.user ? (
+          {session && session?.user ? (
             <>
               <li>
                 <div className="dropdown dropdown-bottom dropdown-end">
@@ -99,12 +99,12 @@ const Menu = () => {
                     tabIndex={0}
                     className="menu dropdown-content z-[1] p-2 shadow bg-base-300 rounded-box w-52 "
                   >
-                    {/* {session?.user?.isAdmin && (
+                    {session?.user?.isAdmin && (
                       <li onClick={handleClick}>
                         <Link href="/admin/dashboard">Admin Dashboard</Link>
                       </li>
                     )}
- */}
+
                     <li onClick={handleClick}>
                       <Link href="/order-history">Order history </Link>
                     </li>
