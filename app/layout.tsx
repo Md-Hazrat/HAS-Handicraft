@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header/header";
 import Providers from "@/components/Providers";
 
+// Load custom fonts with localFont
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -35,7 +36,7 @@ export default function RootLayout({
             <Header />
             {children}
             <footer className="footer footer-center p-4 bg-base-300 text-base-content">
-              <p>Copyright 2024 - All reserved by Ecommerce Amajona</p>
+              <p>Copyright 2024 - All rights reserved by Ecommerce Handi Craft Ltd.</p>
             </footer>
           </div>
         </Providers>

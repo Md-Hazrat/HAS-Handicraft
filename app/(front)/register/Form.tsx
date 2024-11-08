@@ -58,15 +58,15 @@ const Form = () => {
           `/signin?callbackUrl=${callbackUrl}&success=Account has been created`
         );
       } else {
-        const data = await res.json();
-        throw new Error(data.message);
+        const data = await res?.json();
+        throw new Error(data?.message);
       }
     } catch (err: any) {
       const error =
-        err.message && err.message.indexOf("E11000") === 0
+        err?.message && err?.message?.indexOf("E11000") === 0
           ? "Email is duplicate"
           : err.message;
-      toast.error(error || "error");
+      toast?.error(error || "error");
     }
   };
   return (
@@ -123,7 +123,7 @@ const Form = () => {
               className="input input-bordered w-full max-w-sm"
             />
             {errors.password?.message && (
-              <div className="text-error">{errors.password.message}</div>
+              <div className="text-error">{errors?.password?.message}</div>
             )}
           </div>
           <div className="my-2">
@@ -142,8 +142,8 @@ const Form = () => {
               })}
               className="input input-bordered w-full max-w-sm"
             />
-            {errors.confirmPassword?.message && (
-              <div className="text-error">{errors.confirmPassword.message}</div>
+            {errors?.confirmPassword?.message && (
+              <div className="text-error">{errors?.confirmPassword?.message}</div>
             )}
           </div>
           <div className="my-2">

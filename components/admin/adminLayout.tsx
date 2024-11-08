@@ -8,7 +8,7 @@ const AdminLayout = async ({
   activeItem: string;
   children: React.ReactNode;
 }) => {
-  const session:any = await auth();
+  const session = await auth();
   if (!session || !session?.user?.isAdmin) {
     return (
       <div className="relative flex flex-grow p-4">
